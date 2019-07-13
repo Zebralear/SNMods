@@ -4,8 +4,6 @@ using SMLHelper.V2.Crafting;
 using SMLHelper.V2.Handlers;
 using SMLHelper.V2.Utility;
 using UnityEngine;
-using System;
-
 
 
 namespace BaseDrillMod
@@ -29,7 +27,7 @@ namespace BaseDrillMod
             // Register this Prefab with SMLHelper
             PrefabHandler.RegisterPrefab(this);
 
-            // Create a new TechType for new Buildablle
+            // Create a new TechType for new Buildable
             this.TechType = TechTypeHandler.AddTechType
             (
                 NameID,
@@ -58,7 +56,7 @@ namespace BaseDrillMod
                 new Ingredient(TechType.Lithium, 4),
                 new Ingredient(TechType.AdvancedWiringKit, 1),
                 new Ingredient(TechType.Lubricant, 1)
-            }),
+            })
             };
 
             // Associate TechType and TechData
@@ -78,21 +76,15 @@ namespace BaseDrillMod
             {
                 name = NameID
             };
-            Console.WriteLine("[BaseDrillModule] Working at line 83");
 
             // Add prefab ID
             PrefabIdentifier prefabId = BaseDrillModule.AddComponent<PrefabIdentifier>();
-            Console.WriteLine("[BaseDrillModule] Working at line 90");
             prefabId.ClassId = NameID;
-            Console.WriteLine("[BaseDrillModule] Working at line 92");
             prefabId.name = FriendlyName;
-            Console.WriteLine("[BaseDrillModule] Working at line 94");
 
             // Add tech tag
             TechTag techTag = BaseDrillModule.AddComponent<TechTag>();
-            Console.WriteLine("[BaseDrillModule] Working at line 98");
             techTag.type = this.TechType;
-            Console.WriteLine("[BaseDrillModule] Working at line 100");
 
 
             // Add constructable - This prefab normally isn't constructed.
@@ -106,19 +98,12 @@ namespace BaseDrillMod
             constructible.allowedOnConstructables = false;
             constructible.controlModelState = true;
             constructible.rotationEnabled = false;
-            Console.WriteLine("[BaseDrillModule] Working at line 115");
             constructible.techType = this.TechType; // This was necessary to correctly associate the recipe at building time
-            Console.WriteLine("[BaseDrillModule] Working at line 117");
             GameObject BasedrillMesh = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            Console.WriteLine("[BaseDrillModule] Working at line 119");
             constructible.model = BasedrillMesh;
             BasedrillMesh.AddComponent<BaseDrillMesh>();
-            Console.WriteLine("[BaseDrillModule] Working at line 121");
             BasedrillMesh.transform.SetParent(BaseDrillModule.transform);
-            Console.WriteLine("[BaseDrillModule] Working at line 125");
             return BaseDrillModule;
         }
     }
-
-
 }

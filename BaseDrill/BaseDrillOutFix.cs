@@ -58,7 +58,7 @@ namespace BaseDrillMod
                     try
                     {
                         GameObject BaseDrillMesh = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                        StorageContainer storageContainer = BaseDrillMesh.AddComponent<StorageContainer>();
+                        StorageContainer storageContainer = BaseDrillMesh.GetComponent<StorageContainer>();
                         GameObject prefab = CraftData.GetPrefabForTechType(TechType.Titanium, true);
                         InventoryItem inventoryItem = new InventoryItem(prefab.GetComponent<Pickupable>());
                         storageContainer.container.AddItem(inventoryItem.item);

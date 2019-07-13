@@ -4,7 +4,7 @@
     {
         readonly BaseDrillModule instance = new BaseDrillModule();
         readonly OutputTimer instance2 = new OutputTimer();
-        
+
         public void Builder1()
         {
             instance.Patch();

@@ -1,0 +1,11 @@
+{
+  "Id": "BaseDrillModule",
+  "DisplayName": "BaseDrillModule",
+  "Author": "Zebralear",
+  "Version": "0.2.0",
+  "Requires": [ ],
+  "Enable": true,
+  "AssemblyName": "BaseDrillModule.dll",
+  "EntryMethod": "BaseDrillMod.QPatch.Patch",
+  "Config": {}
+}

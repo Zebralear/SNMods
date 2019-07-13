@@ -8,7 +8,6 @@ namespace BaseDrillMod
         private void Awake()
         {
             gameObject.AddComponent<StorageContainer>();
-            StorageContainer storageContainer = GetComponent<StorageContainer>();
 
         }
 

@@ -19,17 +19,16 @@ namespace BaseDrillMod
         //These methods should not be static. Static means the method or member is shared between the class, rather than a particular instance.
         public void InitializeResourceRange()
         {
-                        //Add a semicolon at the end of each statement
-            resourceList.Add(new ResourceRange(1, 10, TechType.Quartz));
-            resourceList.Add(new ResourceRange(11, 19, TechType.Copper));
-            resourceList.Add(new ResourceRange(20, 29, TechType.Lead));
-            resourceList.Add(new ResourceRange(30, 60, TechType.Titanium));
-            resourceList.Add(new ResourceRange(61, 71, TechType.Salt));
-            resourceList.Add(new ResourceRange(72, 75, TechType.Gold));
-            resourceList.Add(new ResourceRange(75, 84, TechType.Salt));
-            resourceList.Add(new ResourceRange(85, 89, TechType.Silver));
-            resourceList.Add(new ResourceRange(90, 93, TechType.Sulphur));
-            resourceList.Add(new ResourceRange(94, 98, TechType.Lithium));
+            //Add a semicolon at the end of each statement
+            resourceList.Add(new ResourceRange(1, 20, TechType.Titanium));
+            resourceList.Add(new ResourceRange(21, 30, TechType.Salt));
+            resourceList.Add(new ResourceRange(31, 40, TechType.Quartz));
+            resourceList.Add(new ResourceRange(41, 50, TechType.Copper));
+            resourceList.Add(new ResourceRange(51, 60, TechType.Lead));
+            resourceList.Add(new ResourceRange(61, 75, TechType.Gold));
+            resourceList.Add(new ResourceRange(76, 83, TechType.Silver));
+            resourceList.Add(new ResourceRange(84, 91, TechType.Lithium));
+            resourceList.Add(new ResourceRange(92, 98, TechType.Titanium));
             resourceList.Add(new ResourceRange(99, 100, TechType.Diamond));
         }
 
